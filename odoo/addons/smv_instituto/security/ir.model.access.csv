@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_smv_instituto_smv_instituto,smv_instituto.smv_instituto,model_smv_instituto_smv_instituto,base.group_user,1,1,1,1
