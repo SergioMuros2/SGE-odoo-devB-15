@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 {
 'name': "smv_instituto",
-'summary': "Gestión de un instituto",
-'description': "El módulo de Gestión de Instituto permite administrar de forma centralizada "
-"la información académica y administrativa. Facilita el registro y control de alumnos, "
-"docentes, cursos y materias",
+'summary': "Management of an institute",
+'description': "This module of management of an institute allows centralized management "
+"of academic and administrative information. It facilitates the registration and control of students, "
+"teachers, courses and subjects",
 'author': "Sergio Muros Vera",
 'website': "https://www.educa2.madrid.org/web/iescanaveral",
 'category': 'Uncategorized',
