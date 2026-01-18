@@ -1,0 +1,35 @@
+<odoo>
+    <data>
+        <record id="smv_instituto_student_tree" model="ir.ui.view">
+            <field name="name">smv_instituto.student.tree</field>
+            <field name="model">smv_instituto.student</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="dni"/>
+                    <field name="gender"/>
+                    <field name="birth_date"/>
+                    <field name="email"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="smv_instituto_student_form" model="ir.ui.view">
+            <field name="name">smv_instituto.student.form</field>
+            <field name="model">smv_instituto.student</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group colspan="2" col ="2">
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="dni"/>
+                        <field name="phone"/>
+                        <field name="email"/>
+                        <field name="birth_date"/>
+                        <field name="gender"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
