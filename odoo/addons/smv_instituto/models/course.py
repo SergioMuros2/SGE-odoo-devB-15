@@ -18,4 +18,9 @@ class Course(models.Model):
         ('C', 'Group C'),
     ], string='Group', help='Select the group of the course.')
     code = fields.Char(string='Code', required=True, help='Introduce the unique code for the course.')
+
+    teacher_id = fields.Many2one('smv_instituto.teacher', string='Teacher')
+    classroom_ids = fields.One2many('smv_instituto.classroom', 'course_id', string='Classrooms')
+    student_ids = fields.One2many('smv_instituto.student', 'course_id', string='Students')
+    
     

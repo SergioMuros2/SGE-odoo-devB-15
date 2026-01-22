@@ -17,3 +17,7 @@ class Student(models.Model):
         ('F', 'Female'),
         ('O', 'Other'),
     ], string='Gender', help='Introduce the gender of the student.')
+
+    classroom_id=fields.Many2one('smv_instituto.classroom', string='Classroom',)
+    course_id=fields.Many2one('smv_instituto.course', string='Course',)
+    subject_ids=fields.Many2many('smv_instituto.subject', string='Subjects',)

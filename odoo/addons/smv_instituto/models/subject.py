@@ -15,3 +15,6 @@ class Subject(models.Model):
         ('E', 'Elective'), 
         ('X', 'Extracurricular'),
     ], string='Subject Type', help='Select the type of the subject.')
+
+    teacher_ids = fields.Many2many('smv_instituto.teacher', string='Teachers')
+    student_ids = fields.Many2many('smv_instituto.student', string='Students')

@@ -17,3 +17,7 @@ class Teacher(models.Model):
         ('F', 'Female'),
         ('O', 'Other')
     ], string='Gender', help='Introduce the gender of the teacher.')
+
+    subject_ids = fields.Many2many('smv_instituto.subject', string='Subjects')
+    classroom_ids = fields.One2many('smv_instituto.classroom', 'teacher_id', string='Classrooms')
+    course_ids = fields.One2many('smv_instituto.course', 'teacher_id', string='Courses')
