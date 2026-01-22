@@ -24,5 +24,18 @@
                 </form>
             </field>
         </record>
+
+        <record id="smv_instituto_course_action" model="ir.actions.act_window">
+            <field name="name">Courses</field>
+            <field name="res_model">smv_instituto.course</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new course.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="smv_instituto_menu_course" name="Courses" parent="smv_instituto_menu_main" action="smv_instituto_course_action"/>
     </data>
 </odoo>

@@ -26,5 +26,18 @@
             </form>
         </field>
     </record>
+
+    <record id="smv_instituto_classroom_action" model="ir.actions.act_window">
+        <field name="name">Classrooms</field>
+        <field name="res_model">smv_instituto.classroom</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new classroom.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="smv_instituto_menu_classroom" name="Classrooms" parent="smv_instituto_menu_main" action="smv_instituto_classroom_action"/>
 </data>
 </odoo>

@@ -27,5 +27,18 @@
           </form>
         </field>
     </record>
+
+    <record id="smv_instituto_subject_action" model="ir.actions.act_window">
+      <field name="name">Subjects</field>
+      <field name="res_model">smv_instituto.subject</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+              Click to create a new subject.
+          </p>
+      </field>
+    </record>
+
+    <menuitem id="smv_instituto_menu_subject" name="Subjects" parent="smv_instituto_menu_main" action="smv_instituto_subject_action"/>
     </data>
 </odoo>

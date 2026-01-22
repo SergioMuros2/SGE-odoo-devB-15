@@ -31,5 +31,18 @@
                 </form>
             </field>
         </record>
+
+        <record id="smv_instituto_student_action" model="ir.actions.act_window">
+            <field name="name">Students</field>
+            <field name="res_model">smv_instituto.student</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new student.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="smv_instituto_menu_student" name="Students" parent="smv_instituto_menu_main" action="smv_instituto_student_action"/>
     </data>
 </odoo>

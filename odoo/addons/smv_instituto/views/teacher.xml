@@ -30,5 +30,18 @@
           </form>
       </field>
       </record>
+
+    <record id="smv_instituto_teacher_action" model="ir.actions.act_window">
+      <field name="name">Teachers</field>
+      <field name="res_model">smv_instituto.teacher</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+              Click to create a new teacher.
+          </p>
+      </field>
+    </record>
+
+    <menuitem id="smv_instituto_menu_teacher" name="Teachers" parent="smv_instituto_menu_main" action="smv_instituto_teacher_action"/>
     </data>
 </odoo>
