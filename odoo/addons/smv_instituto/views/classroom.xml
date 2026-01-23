@@ -37,7 +37,7 @@
             </p>
         </field>
     </record>
-
+    <menuitem id="smv_instituto_menu_main" name="Instituto"/>
     <menuitem id="smv_instituto_menu_classroom" name="Classrooms" parent="smv_instituto_menu_main" action="smv_instituto_classroom_action"/>
 </data>
 </odoo>
