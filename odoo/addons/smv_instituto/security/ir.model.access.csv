@@ -1,2 +1,13 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_smv_instituto_smv_instituto,smv_instituto.smv_instituto,model_smv_instituto_smv_instituto,base.group_user,1,1,1,1
+
+access_smv_instituto.classroom_users,smv_instituto.classroom_users,model_smv_instituto_classroom,base.group_user,1,1,1,0
+access_smv_instituto.course_users,smv_instituto.course_users,model_smv_instituto_course,base.group_user,1,1,1,0
+access_smv_instituto.subject_users,smv_instituto.subject_users,model_smv_instituto_subject,base.group_user,1,1,1,0
+access_smv_instituto.student_users,smv_instituto.student_users,model_smv_instituto_student,base.group_user,1,1,1,0
+access_smv_instituto.teacher_users,smv_instituto.teacher_users,model_smv_instituto_teacher,base.group_user,1,1,1,0
+
+access_smv_instituto.classroom_managers,smv_instituto.classroom_managers,model_smv_instituto_classroom,base.group_erp_manager,1,1,1,1
+access_smv_instituto.course_managers,smv_instituto.course_managers,model_smv_instituto_course,base.group_erp_manager,1,1,1,1
+access_smv_instituto.subject_managers,smv_instituto.subject_managers,model_smv_instituto_subject,base.group_erp_manager,1,1,1,1
+access_smv_instituto.student_managers,smv_instituto.student_managers,model_smv_instituto_student,base.group_erp_manager,1,1,1,1
+access_smv_instituto.teacher_managers,smv_instituto.teacher_managers,model_smv_instituto_teacher,base.group_erp_manager,1,1,1,1

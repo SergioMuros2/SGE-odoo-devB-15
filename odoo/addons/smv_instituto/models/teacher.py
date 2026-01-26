@@ -17,6 +17,7 @@ class Teacher(models.Model):
         ('F', 'Female'),
         ('O', 'Other')
     ], string='Gender', help='Introduce the gender of the teacher.')
+    profile_image=fields.Image(string="Profile",max_width=1024 ,max_height=1024,help="Select image")
 
     subject_ids = fields.Many2many('smv_instituto.subject', string='Subjects')
     classroom_ids = fields.One2many('smv_instituto.classroom', 'teacher_id', string='Classrooms')
