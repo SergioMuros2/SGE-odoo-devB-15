@@ -13,7 +13,7 @@
 'depends': ['base'],
 # always loaded
 'data': [
-# 'security/ir.model.access.csv',
+'security/ir.model.access.csv',
 'views/classroom.xml',
 'views/course.xml',
 'views/student.xml',
@@ -24,4 +24,5 @@
 'demo': [
 'demo/demo.xml',
 ],
+'application': True,
 }
