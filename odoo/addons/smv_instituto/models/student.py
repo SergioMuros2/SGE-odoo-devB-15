@@ -17,6 +17,8 @@ class Student(models.Model):
         ('F', 'Female'),
         ('O', 'Other'),
     ], string='Gender', help='Introduce the gender of the student.')
+    profile_image=fields.Image(string="Profile",max_width=1024 ,max_height=1024,help="Select image")
+
 
     classroom_id=fields.Many2one('smv_instituto.classroom', string='Classroom',)
     course_id=fields.Many2one('smv_instituto.course', string='Course',)
