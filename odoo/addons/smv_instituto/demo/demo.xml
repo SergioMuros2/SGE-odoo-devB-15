@@ -1,30 +1,101 @@
 <odoo>
     <data>
-<!--
-          <record id="object0" model="smv_instituto.smv_instituto">
-            <field name="name">Object 0</field>
-            <field name="value">0</field>
-          </record>
 
-          <record id="object1" model="smv_instituto.smv_instituto">
-            <field name="name">Object 1</field>
-            <field name="value">10</field>
-          </record>
+        <record id="subject_1" model="smv_instituto.subject">
+            <field name="name">Mathematics</field>
+            <field name="code">MATH101</field>
+            <field name="description">Basic Mathematics</field>
+            <field name="weekly_hours">5</field>
+            <field name="subject_type">C</field>
+        </record>
 
-          <record id="object2" model="smv_instituto.smv_instituto">
-            <field name="name">Object 2</field>
-            <field name="value">20</field>
-          </record>
+        <record id="subject_2" model="smv_instituto.subject">
+            <field name="name">Physics</field>
+            <field name="code">PHY101</field>
+            <field name="description">Introduction to Physics</field>
+            <field name="weekly_hours">4</field>
+            <field name="subject_type">C</field>
+        </record>
 
-          <record id="object3" model="smv_instituto.smv_instituto">
-            <field name="name">Object 3</field>
-            <field name="value">30</field>
-          </record>
+        <record id="teacher_1" model="smv_instituto.teacher">
+            <field name="name">Alice Smith</field>
+            <field name="code">T001</field>
+            <field name="dni">12345678A</field>
+            <field name="phone">123456789</field>
+            <field name="email">alice@school.com</field>
+            <field name="birth_date">1980-05-10</field>
+            <field name="gender">F</field>
+            <field name="subject_ids" eval="[(4, ref('subject_1')), (4, ref('subject_2'))]"/>
+        </record>
 
-          <record id="object4" model="smv_instituto.smv_instituto">
-            <field name="name">Object 4</field>
-            <field name="value">40</field>
-          </record>
--->
+        <record id="teacher_2" model="smv_instituto.teacher">
+            <field name="name">Bob Johnson</field>
+            <field name="code">T002</field>
+            <field name="dni">87654321B</field>
+            <field name="phone">987654321</field>
+            <field name="email">bob@school.com</field>
+            <field name="birth_date">1975-09-15</field>
+            <field name="gender">M</field>
+            <field name="subject_ids" eval="[(4, ref('subject_2'))]"/>
+        </record>
+
+        <record id="course_1" model="smv_instituto.course">
+            <field name="year">1</field>
+            <field name="group">A</field>
+            <field name="code">C101</field>
+            <field name="teacher_id" ref="teacher_1"/>
+        </record>
+
+        <record id="course_2" model="smv_instituto.course">
+            <field name="year">2</field>
+            <field name="group">B</field>
+            <field name="code">C102</field>
+            <field name="teacher_id" ref="teacher_2"/>
+        </record>
+
+        <record id="classroom_1" model="smv_instituto.classroom">
+            <field name="name">Room 101</field>
+            <field name="code">R101</field>
+            <field name="capacity">30</field>
+            <field name="location">First Floor</field>
+            <field name="teacher_id" ref="teacher_1"/>
+            <field name="course_id" ref="course_1"/>
+        </record>
+
+        <record id="classroom_2" model="smv_instituto.classroom">
+            <field name="name">Room 102</field>
+            <field name="code">R102</field>
+            <field name="capacity">25</field>
+            <field name="location">Second Floor</field>
+            <field name="teacher_id" ref="teacher_2"/>
+            <field name="course_id" ref="course_2"/>
+        </record>
+
+        <record id="student_1" model="smv_instituto.student">
+            <field name="name">John Doe</field>
+            <field name="code">S001</field>
+            <field name="dni">11111111X</field>
+            <field name="phone">111111111</field>
+            <field name="email">john@example.com</field>
+            <field name="birth_date">2005-03-20</field>
+            <field name="gender">M</field>
+            <field name="classroom_id" ref="classroom_1"/>
+            <field name="course_id" ref="course_1"/>
+            <field name="subject_ids" eval="[(4, ref('subject_1'))]"/>
+        </record>
+
+        <record id="student_2" model="smv_instituto.student">
+            <field name="name">Jane Roe</field>
+            <field name="code">S002</field>
+            <field name="dni">22222222Y</field>
+            <field name="phone">222222222</field>
+            <field name="email">jane@example.com</field>
+            <field name="birth_date">2006-07-12</field>
+            <field name="gender">F</field>
+            <field name="classroom_id" ref="classroom_2"/>
+            <field name="course_id" ref="course_2"/>
+            <field name="subject_ids" eval="[(4, ref('subject_1')), (4, ref('subject_2'))]"/>
+        </record>
+
     </data>
 </odoo>
