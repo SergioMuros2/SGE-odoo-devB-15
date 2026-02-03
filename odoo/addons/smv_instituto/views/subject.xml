@@ -23,6 +23,8 @@
                     <field name="description"/>
                     <field name="weekly_hours"/>
                     <field name="subject_type"/>
+                    <field name="teacher_ids" widget="many2many_tags"/>
+                    <field name="student_ids" widget="many2many_tags"/>
                 </group>
           </form>
         </field>
