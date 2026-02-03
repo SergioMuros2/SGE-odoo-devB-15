@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields
+from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 
 class Subject(models.Model):
     _name = 'smv_instituto.subject'
     _description = 'Subject'
 
-    name = fields.Char(string='Name', required=True, help='Introduce the name of the subject.')
+    name = fields.Char(string='Name', help='Introduce the name of the subject.')
     code = fields.Char(string='Code', required=True, help='Introduce the unique code for the subject.')
     description = fields.Text(string='Description', help='Introduce a brief description of the subject.')
     weekly_hours = fields.Integer(string='Weekly Hours', help='Introduce the number of weekly hours for the subject.')
@@ -18,3 +19,8 @@ class Subject(models.Model):
 
     teacher_ids = fields.Many2many('smv_instituto.teacher', string='Teachers')
     student_ids = fields.Many2many('smv_instituto.student', string='Students')
+
+    @api.constrains("name")
+    def check_name(self):
+        if not self.name:
+            raise ValidationError("No has añadido el nombre de la asignatura")
